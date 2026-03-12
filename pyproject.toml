@@ -1,0 +1,18 @@
+[project]
+name = "comfyui-mcp"
+version = "0.1.0"
+description = "MCP server for ComfyUI – trigger image generation workflows from Claude Code"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Lukas Kellerstein" }]
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "websocket-client>=1.6.0",
+]
+
+[project.scripts]
+comfyui-mcp = "comfyui_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
